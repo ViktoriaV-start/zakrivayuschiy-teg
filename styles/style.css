@@ -17,7 +17,7 @@
 .page {
   color: var(--main-color);
   font-family: "Inter", "Arial", sans-serif;
-  font-weight: var(--font-weight-normal);
+  font-variation-settings: 'wght' var(--font-weight-normal);
   font-size: var(--main-font-size);
   background-color: var(--bg-color);
   background-image: var(--bg-img);
@@ -127,7 +127,6 @@
 .theme-menu__button[disabled]:before {
   content: "▶";
   position: absolute;
-  left: 0;
   left: -12px;
   display: inline-block;
   color: inherit;
@@ -141,7 +140,7 @@
 
 .card__title {
   padding: 5px 10px 3px;
-  font-weight: var(--font-weight-bold);
+  font-variation-settings: 'wght' var(--font-weight-bold);
   font-size: var(--main-font-size);
   line-height: 122%;
 }
