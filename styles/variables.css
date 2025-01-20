@@ -1,1 +1,14 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+  --bg-color: #fff;
+  --accent-color: #ff0000;
+  --main-color: #000;
+  --bg-img: url(../svg/pattern-light.svg);
+  --border: 2px solid #000;
+  --main-font-size: 18px;
+  --header-padding-block-start: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --container-inline-size: 48.6vw;
+}
