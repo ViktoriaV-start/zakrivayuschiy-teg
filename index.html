@@ -53,7 +53,7 @@
         <source media="(width <= 640px)" srcset="
             ./images/car.375.png 1x,
             ./images/car.750.png 2x
-            " />
+            ">
         <source media="(width > 640px)" srcset="
               ./images/car.700.png 1x,
               ./images/car.1400.png 2x
@@ -61,7 +61,7 @@
         <img class="card__img" src="./images/car.700.png"
           alt="Изображение в пиксельной технике, как в первых компьютерных игрушках: красно-былый минивен едет по ночной дороге.">
       </picture>
-      <p class="card__text card__text_mb">
+      <p class="card__text card__text_mb card__text_bt">
         Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно,
         подумать, как новые знания могут повлиять на ваше будущее.
       </p>
@@ -69,7 +69,7 @@
         Место для ваших воспоминаний о начале обучения.
       </p>
       <div class="card__like">
-        <button class="card__icon-button">
+        <button class="card__icon-button" type="button">
           <svg class="like-icon" width="39" height="36" fill="none">
             <g clip-path="url(#a)">
               <g class="heart">
@@ -90,10 +90,10 @@
             </defs>
           </svg>
         </button>
-        <button class="card__like-button"><span class="button__text">Like</span></button>
+        <button class="card__like-button button" type="button"><span class="button__text">Like</span></button>
       </div>
     </section>
-    <button class="save">
+    <button class="save button" type="button">
       <svg class="save__icon" width="29" height="28" viewBox="0 0 29 28">
         <use href="./svg/floppy.svg#floppy"></use>
       </svg>
