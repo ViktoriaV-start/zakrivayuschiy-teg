@@ -1,107 +1,673 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>Закрывающий тег</title>
+    <link rel="stylesheet" href="./fonts/fonts.css">
+    <link rel="stylesheet" href="./styles/variables.css">
+    <link rel="stylesheet" href="./styles/globals.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/animations.css">
+    <link rel="stylesheet" href="./styles/themes.css">
+    <link rel="icon" href="./images/favicon.ico" sizes="any">
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./images/mobile-icon.png">
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="color-scheme" content="light dark">
-  <title>Закрывающий тег</title>
-  <link rel="stylesheet" href="./fonts/fonts.css">
-  <link rel="stylesheet" href="./styles/variables.css">
-  <link rel="stylesheet" href="./styles/globals.css">
-  <link rel="stylesheet" href="./styles/style.css">
-  <link rel="stylesheet" href="./styles/animations.css">
-  <link rel="stylesheet" href="./styles/themes.css">
-  <link rel="icon" href="./images/favicon.ico" sizes="any">
-  <link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="./images/mobile-icon.png">
-
-
-</head>
-
-<body class="page">
-  <header class="header container">
-    <a class="header__logo">&lt;/HTML&gt;</a>
-    <h1 class="header__title">закрывающий тег</h1>
-    <nav class="theme-menu header__theme-menu">
-      <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
-      <ul class="theme-menu__list">
-        <li class="theme-menu__item">
-          <button type="button" data-theme="dark" class="theme-menu__button">
-            Темно
-          </button>
+  <body class="page">
+    <header class="header container">
+      <a class="header__logo">&lt;/HTML&gt;</a>
+      <h1 class="header__title">закрывающий тег</h1>
+      <nav class="theme-menu header__theme-menu">
+        <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
+        <ul class="theme-menu__list">
+          <li class="theme-menu__item">
+            <button type="button" data-theme="dark" class="theme-menu__button">
+              Темно
+            </button>
+          </li>
+          <li class="theme-menu__item">
+            <button
+              type="button"
+              data-theme="auto"
+              disabled
+              class="theme-menu__button"
+            >
+              Авто
+            </button>
+          </li>
+          <li class="theme-menu__item">
+            <button type="button" data-theme="light" class="theme-menu__button">
+              Светло
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <ul>
+        <li>
+          <section class="container card start">
+            <h2 class="card__title">
+              Фритрек и нулевой спринт: Подготовка&nbsp;к&nbsp;работе
+            </h2>
+            <div class="card__picture-wrap">
+              <span class="card__picture-label">&lt;/HTML&gt;</span>
+              <picture class="card__picture">
+                <source
+                  media="(width <= 640px)"
+                  srcset="
+                    ./images/naruto/freetrack.400.jpeg 1x,
+                    ./images/naruto/freetrack.750.jpeg 2x
+                  "
+                >
+                <source
+                  media="(width > 640px)"
+                  srcset="
+                    ./images/naruto/freetrack.750.jpeg 1x,
+                    ./images/naruto/freetrack.jpeg     2x
+                  "
+                >
+                <img
+                  class="card__img"
+                  src="./images/naruto/freetrack.750.jpeg"
+                  alt="Иллюстрация к анимае Наруто: Науруто, Саске и Сакура стоят в решительных позах,"
+                >
+              </picture>
+            </div>
+            <p class="card__text card__text_mb card__text_bt">
+              Это было самое начало пути. На этом этапе важно было проникнуться
+              основами и настроиться на учёбу. И, возможно,&nbsp;подумать, как
+              новые знания могут повлиять на ваше будущее.
+            </p>
+            <p class="card__text">Решение принято. Стартуем.</p>
+            <div class="card__like">
+              <button class="card__icon-button" type="button">
+                <svg class="like-icon" width="39" height="36" fill="none">
+                  <g clip-path="url(#a)">
+                    <g class="heart">
+                      <path
+                        class="contour"
+                        fill="#000"
+                        d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"
+                      />
+                      <path
+                        class="main-body"
+                        fill="none"
+                        d="M12 9H9v3h3V9Zm3 3h-3v3h3v-3Zm3-3h-3v3h3V9Zm-6 6H9v3h3v-3Zm3 0h-3v3h3v-3Zm0 3h-3v3h3v-3Zm3-6h-3v3h3v-3Zm0 9h-3v3h3v-3Zm0-3h-3v3h3v-3Zm9-9h3v3h-3V9Zm-3 0h3v3h-3V9Zm3 3h3v3h-3v-3Zm-3 0h3v3h-3v-3Zm-3-3h3v3h-3V9Zm6 6h3v3h-3v-3Zm-3 0h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-3-6h3v3h-3v-3Zm0 9h3v3h-3v-3Zm0-3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0 3h-3v3h3v-3Z"
+                      />
+                      <path
+                        class="core"
+                        fill="none"
+                        d="M18 15h-3v3h3v-3Zm3 0h3v3h-3v-3Zm0 0h-3v3h3v-3Zm0-3h-3v3h3v-3Zm0 6h-3v3h3v-3Z"
+                      />
+                    </g>
+                    <path
+                      class="sparks"
+                      fill="none"
+                      d="M36 13h3v3h-3v-3Zm-9 14h3v3h-3v-3Zm-9 6h3v3h-3v-3Zm-9-6h3v3H9v-3ZM24 0h3v3h-3V0Zm9 3h3v3h-3V3ZM3 3h3v3H3V3Zm9-3h3v3h-3V0ZM0 13h3v3H0v-3Z"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="a">
+                      <path fill="#fff" d="M0 0h39v36H0z" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+              <button class="card__like-button button" type="button">
+                <span class="button__text">Like</span>
+              </button>
+            </div>
+          </section>
         </li>
-        <li class="theme-menu__item">
-          <button type="button" data-theme="auto" disabled class="theme-menu__button">
-            Авто
-          </button>
+        <li>
+          <section class="container card start">
+            <h2 class="card__title">1 спринт: Я &mdash; чистый лист</h2>
+            <div class="card__picture-wrap img-start">
+              <span class="card__picture-label">&lt;/HTML&gt;</span>
+              <picture class="card__picture">
+                <source
+                  media="(width <= 640px)"
+                  srcset="
+                    ./images/naruto/start.400.jpeg 1x,
+                    ./images/naruto/start.540.jpeg 2x
+                  "
+                >
+                <img
+                  class="card__img"
+                  src="./images/naruto/start.540.jpeg"
+                  alt="Кадр из аниме Наруто в непривычной сине-зеленой цветовой гамме: Наруто в кафе, хитро подмигивает."
+                >
+              </picture>
+            </div>
+            <p class="card__text card__text_mb card__text_bt">
+              На первых этапах мы работали со страхами и сомнениями, которые
+              часто испытывают новички. Один из них — страх перед чистым листом.
+              Это, конечно же, намного сложнее, чем боязнь куска бумаги. Часто
+              за этим ощущением скрываются более глубокие вопросы: с чего
+              начать? а&nbsp;вдруг будет слишком сложно? что, если я не
+              справлюсь?
+            </p>
+            <p class="card__text">
+              Привычный HTM/CSS открывается с новой стороны.
+            </p>
+            <div class="card__like">
+              <button class="card__icon-button" type="button">
+                <svg class="like-icon" width="39" height="36" fill="none">
+                  <g clip-path="url(#b)">
+                    <g class="heart">
+                      <path
+                        class="contour"
+                        fill="#000"
+                        d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"
+                      />
+                      <path
+                        class="main-body"
+                        fill="none"
+                        d="M12 9H9v3h3V9Zm3 3h-3v3h3v-3Zm3-3h-3v3h3V9Zm-6 6H9v3h3v-3Zm3 0h-3v3h3v-3Zm0 3h-3v3h3v-3Zm3-6h-3v3h3v-3Zm0 9h-3v3h3v-3Zm0-3h-3v3h3v-3Zm9-9h3v3h-3V9Zm-3 0h3v3h-3V9Zm3 3h3v3h-3v-3Zm-3 0h3v3h-3v-3Zm-3-3h3v3h-3V9Zm6 6h3v3h-3v-3Zm-3 0h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-3-6h3v3h-3v-3Zm0 9h3v3h-3v-3Zm0-3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0 3h-3v3h3v-3Z"
+                      />
+                      <path
+                        class="core"
+                        fill="none"
+                        d="M18 15h-3v3h3v-3Zm3 0h3v3h-3v-3Zm0 0h-3v3h3v-3Zm0-3h-3v3h3v-3Zm0 6h-3v3h3v-3Z"
+                      />
+                    </g>
+                    <path
+                      class="sparks"
+                      fill="none"
+                      d="M36 13h3v3h-3v-3Zm-9 14h3v3h-3v-3Zm-9 6h3v3h-3v-3Zm-9-6h3v3H9v-3ZM24 0h3v3h-3V0Zm9 3h3v3h-3V3ZM3 3h3v3H3V3Zm9-3h3v3h-3V0ZM0 13h3v3H0v-3Z"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="b">
+                      <path fill="#fff" d="M0 0h39v36H0z" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+              <button class="card__like-button button" type="button">
+                <span class="button__text">Like</span>
+              </button>
+            </div>
+          </section>
         </li>
-        <li class="theme-menu__item">
-          <button type="button" data-theme="light" class="theme-menu__button">
-            Светло
-          </button>
+        <li>
+          <section class="container card start">
+            <h2 class="card__title">1 спринт: А если не получится?</h2>
+            <div class="card__picture-wrap">
+              <span class="card__picture-label">&lt;CSS&gt;</span>
+              <picture class="card__picture img__scaring">
+                <source
+                  media="(width <= 640px)"
+                  srcset="
+                    ./images/naruto/scare.400.jpeg 1x,
+                    ./images/naruto/scare.540.jpeg 2x
+                  "
+                >
+                <img
+                  class="card__img"
+                  src="./images/naruto/scare.540.jpeg"
+                  alt="Кадр из аниме 'Наруто' - испуганный Наруто смотри вперед. Его лицо напряжено, глаза широко открыты, зубы сжаты."
+                >
+              </picture>
+            </div>
+            <p class="card__text card__text_mb card__text_bt">
+              Первый проект — позади! Но это всё ещё самое начало пути. Радость
+              могла быстро померкнуть и смениться ожиданием провала. Или вы,
+              наоборот, могли вдохновиться успехами и поверить в себя.
+            </p>
+            <p class="card__text">
+              Отринуть привычные методы и сделать по-новому.
+            </p>
+            <div class="card__like">
+              <button class="card__icon-button" type="button">
+                <svg class="like-icon" width="39" height="36" fill="none">
+                  <g clip-path="url(#c)">
+                    <g class="heart">
+                      <path
+                        class="contour"
+                        fill="#000"
+                        d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"
+                      />
+                      <path
+                        class="main-body"
+                        fill="none"
+                        d="M12 9H9v3h3V9Zm3 3h-3v3h3v-3Zm3-3h-3v3h3V9Zm-6 6H9v3h3v-3Zm3 0h-3v3h3v-3Zm0 3h-3v3h3v-3Zm3-6h-3v3h3v-3Zm0 9h-3v3h3v-3Zm0-3h-3v3h3v-3Zm9-9h3v3h-3V9Zm-3 0h3v3h-3V9Zm3 3h3v3h-3v-3Zm-3 0h3v3h-3v-3Zm-3-3h3v3h-3V9Zm6 6h3v3h-3v-3Zm-3 0h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-3-6h3v3h-3v-3Zm0 9h3v3h-3v-3Zm0-3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0 3h-3v3h3v-3Z"
+                      />
+                      <path
+                        class="core"
+                        fill="none"
+                        d="M18 15h-3v3h3v-3Zm3 0h3v3h-3v-3Zm0 0h-3v3h3v-3Zm0-3h-3v3h3v-3Zm0 6h-3v3h3v-3Z"
+                      />
+                    </g>
+                    <path
+                      class="sparks"
+                      fill="none"
+                      d="M36 13h3v3h-3v-3Zm-9 14h3v3h-3v-3Zm-9 6h3v3h-3v-3Zm-9-6h3v3H9v-3ZM24 0h3v3h-3V0Zm9 3h3v3h-3V3ZM3 3h3v3H3V3Zm9-3h3v3h-3V0ZM0 13h3v3H0v-3Z"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="c">
+                      <path fill="#fff" d="M0 0h39v36H0z" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+              <button class="card__like-button button" type="button">
+                <span class="button__text">Like</span>
+              </button>
+            </div>
+          </section>
+        </li>
+        <li>
+          <section class="container card start">
+            <h2 class="card__title">2 спринт: Погоня за идеалом</h2>
+            <div class="card__picture-wrap">
+              <span class="card__picture-label">&lt;desigions&gt;</span>
+              <picture class="card__picture img__ideal">
+                <source
+                  media="(width <= 640px)"
+                  srcset="
+                    ./images/naruto/ideal.400.jpeg 1x,
+                    ./images/naruto/ideal.750.jpeg 2x
+                  "
+                >
+                <source
+                  media="(width > 640px)"
+                  srcset="
+                    ./images/naruto/ideal.750.jpeg 1x,
+                    ./images/naruto/ideal.jpeg     2x
+                  "
+                >
+                <img
+                  class="card__img"
+                  src="./images/naruto/ideal.750.jpeg"
+                  alt="Иллюстрация в ярких неоновых инвертированных оттенках - Наруто в прыжке с вытянутой рукой и раскрытой ладонью"
+                >
+              </picture>
+            </div>
+            <p class="card__text card__text_mb card__text_bt">
+              На этом этапе вы уже достаточно разбирались в основах вёрстки,
+              чтобы понять, как много ещё впереди. Вы могли попытаться погнаться
+              за идеалом и понять, что он недостижим. А, может, вы вовсе и не
+              подвержены перфекционизму и вместо того, чтобы сделать идеально,
+              старались просто сделать.
+            </p>
+            <p class="card__text">Азарт и желание двигаться вперед.</p>
+            <div class="card__like">
+              <button class="card__icon-button" type="button">
+                <svg class="like-icon" width="39" height="36" fill="none">
+                  <g clip-path="url(#d)">
+                    <g class="heart">
+                      <path
+                        class="contour"
+                        fill="#000"
+                        d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"
+                      />
+                      <path
+                        class="main-body"
+                        fill="none"
+                        d="M12 9H9v3h3V9Zm3 3h-3v3h3v-3Zm3-3h-3v3h3V9Zm-6 6H9v3h3v-3Zm3 0h-3v3h3v-3Zm0 3h-3v3h3v-3Zm3-6h-3v3h3v-3Zm0 9h-3v3h3v-3Zm0-3h-3v3h3v-3Zm9-9h3v3h-3V9Zm-3 0h3v3h-3V9Zm3 3h3v3h-3v-3Zm-3 0h3v3h-3v-3Zm-3-3h3v3h-3V9Zm6 6h3v3h-3v-3Zm-3 0h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-3-6h3v3h-3v-3Zm0 9h3v3h-3v-3Zm0-3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0 3h-3v3h3v-3Z"
+                      />
+                      <path
+                        class="core"
+                        fill="none"
+                        d="M18 15h-3v3h3v-3Zm3 0h3v3h-3v-3Zm0 0h-3v3h3v-3Zm0-3h-3v3h3v-3Zm0 6h-3v3h3v-3Z"
+                      />
+                    </g>
+                    <path
+                      class="sparks"
+                      fill="none"
+                      d="M36 13h3v3h-3v-3Zm-9 14h3v3h-3v-3Zm-9 6h3v3h-3v-3Zm-9-6h3v3H9v-3ZM24 0h3v3h-3V0Zm9 3h3v3h-3V3ZM3 3h3v3H3V3Zm9-3h3v3h-3V0ZM0 13h3v3H0v-3Z"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="d">
+                      <path fill="#fff" d="M0 0h39v36H0z" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+              <button class="card__like-button button" type="button">
+                <span class="button__text">Like</span>
+              </button>
+            </div>
+          </section>
+        </li>
+        <li>
+          <section class="container card start">
+            <h2 class="card__title">2 спринт: О тех, кто рядом</h2>
+            <div class="card__picture-wrap">
+              <span class="card__picture-label">care</span>
+              <picture class="card__picture img__near">
+                <source
+                  media="(width <= 640px)"
+                  srcset="
+                    ./images/naruto/characters.400.jpeg 1x,
+                    ./images/naruto/characters.750.jpeg 2x
+                  "
+                >
+                <source
+                  media="(width > 640px)"
+                  srcset="
+                    ./images/naruto/characters.750.jpeg 1x,
+                    ./images/naruto/characters.jpeg     2x
+                  "
+                >
+                <img
+                  class="card__img"
+                  src="./images/naruto/characters.jpeg"
+                  alt="Нечеткое изображение группы людей. На первом плане угадывается фигура Наруто в языках пламени."
+                >
+              </picture>
+            </div>
+            <p class="card__text card__text_mb card__text_bt">
+              Всё это время вы были не одиноки (хотя, возможно, иногда и
+              чувствовали, что одни против целого мира). Вас окружали
+              одногруппники, команда сопровождения и просто близкие люди,
+              которым можно пожаловаться, если очередной макет просто так не
+              поддавался. Осваивать что-то новое легче, когда рядом есть
+              единомышленники, не правда ли?
+            </p>
+            <p class="card__text">
+              А вот здесь надо было поднапрячься с инпутами и чекбоксами.
+            </p>
+            <div class="card__like">
+              <button class="card__icon-button" type="button">
+                <svg class="like-icon" width="39" height="36" fill="none">
+                  <g clip-path="url(#e)">
+                    <g class="heart">
+                      <path
+                        class="contour"
+                        fill="#000"
+                        d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"
+                      />
+                      <path
+                        class="main-body"
+                        fill="none"
+                        d="M12 9H9v3h3V9Zm3 3h-3v3h3v-3Zm3-3h-3v3h3V9Zm-6 6H9v3h3v-3Zm3 0h-3v3h3v-3Zm0 3h-3v3h3v-3Zm3-6h-3v3h3v-3Zm0 9h-3v3h3v-3Zm0-3h-3v3h3v-3Zm9-9h3v3h-3V9Zm-3 0h3v3h-3V9Zm3 3h3v3h-3v-3Zm-3 0h3v3h-3v-3Zm-3-3h3v3h-3V9Zm6 6h3v3h-3v-3Zm-3 0h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-3-6h3v3h-3v-3Zm0 9h3v3h-3v-3Zm0-3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0 3h-3v3h3v-3Z"
+                      />
+                      <path
+                        class="core"
+                        fill="none"
+                        d="M18 15h-3v3h3v-3Zm3 0h3v3h-3v-3Zm0 0h-3v3h3v-3Zm0-3h-3v3h3v-3Zm0 6h-3v3h3v-3Z"
+                      />
+                    </g>
+                    <path
+                      class="sparks"
+                      fill="none"
+                      d="M36 13h3v3h-3v-3Zm-9 14h3v3h-3v-3Zm-9 6h3v3h-3v-3Zm-9-6h3v3H9v-3ZM24 0h3v3h-3V0Zm9 3h3v3h-3V3ZM3 3h3v3H3V3Zm9-3h3v3h-3V0ZM0 13h3v3H0v-3Z"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="e">
+                      <path fill="#fff" d="M0 0h39v36H0z" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+              <button class="card__like-button button" type="button">
+                <span class="button__text">Like</span>
+              </button>
+            </div>
+          </section>
+        </li>
+        <li>
+          <section class="container card start">
+            <h2 class="card__title">3 спринт: Обходные стратегии</h2>
+            <div class="card__picture-wrap">
+              <span class="card__picture-label">&lt;support&gt;</span>
+              <picture class="card__picture img__round-way">
+                <source
+                  media="(width <= 640px)"
+                  srcset="
+                    ./images/naruto/snake.400.jpeg 1x,
+                    ./images/naruto/snake.750.jpeg 2x
+                  "
+                >
+                <source
+                  media="(width > 640px)"
+                  srcset="
+                    ./images/naruto/snake.750.jpeg 1x,
+                    ./images/naruto/snake.jpeg     2x
+                  "
+                >
+                <img
+                  class="card__img"
+                  src="./images/naruto/snake.750.jpeg"
+                  alt="Изображение в стиле негатива черно-белой фотографии. Большая змея подняла, Наруто ползет."
+                >
+              </picture>
+            </div>
+            <p class="card__text card__text_mb card__text_bt">
+              На этом курсе вы постоянно решали разные задачи. В какой-то момент
+              вам могло показаться, что решения просто иссякли. Значит, пришло
+              время посмотреть на задачу под другим углом.
+            </p>
+            <p class="card__text">
+              Новый рабочий проект. Переход в другую когорту.
+            </p>
+            <div class="card__like">
+              <button class="card__icon-button" type="button">
+                <svg class="like-icon" width="39" height="36" fill="none">
+                  <g clip-path="url(#f)">
+                    <g class="heart">
+                      <path
+                        class="contour"
+                        fill="#000"
+                        d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"
+                      />
+                      <path
+                        class="main-body"
+                        fill="none"
+                        d="M12 9H9v3h3V9Zm3 3h-3v3h3v-3Zm3-3h-3v3h3V9Zm-6 6H9v3h3v-3Zm3 0h-3v3h3v-3Zm0 3h-3v3h3v-3Zm3-6h-3v3h3v-3Zm0 9h-3v3h3v-3Zm0-3h-3v3h3v-3Zm9-9h3v3h-3V9Zm-3 0h3v3h-3V9Zm3 3h3v3h-3v-3Zm-3 0h3v3h-3v-3Zm-3-3h3v3h-3V9Zm6 6h3v3h-3v-3Zm-3 0h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-3-6h3v3h-3v-3Zm0 9h3v3h-3v-3Zm0-3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0 3h-3v3h3v-3Z"
+                      />
+                      <path
+                        class="core"
+                        fill="none"
+                        d="M18 15h-3v3h3v-3Zm3 0h3v3h-3v-3Zm0 0h-3v3h3v-3Zm0-3h-3v3h3v-3Zm0 6h-3v3h3v-3Z"
+                      />
+                    </g>
+                    <path
+                      class="sparks"
+                      fill="none"
+                      d="M36 13h3v3h-3v-3Zm-9 14h3v3h-3v-3Zm-9 6h3v3h-3v-3Zm-9-6h3v3H9v-3ZM24 0h3v3h-3V0Zm9 3h3v3h-3V3ZM3 3h3v3H3V3Zm9-3h3v3h-3V0ZM0 13h3v3H0v-3Z"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="f">
+                      <path fill="#fff" d="M0 0h39v36H0z" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+              <button class="card__like-button button" type="button">
+                <span class="button__text">Like</span>
+              </button>
+            </div>
+          </section>
+        </li>
+        <li>
+          <section class="container card start">
+            <h2 class="card__title">3 спринт: Когда опускаются руки</h2>
+            <div class="card__picture-wrap">
+              <span class="card__picture-label">&lt;life-style: none;&gt;</span>
+              <picture class="card__picture img__low-spitits">
+                <source
+                  media="(width <= 640px)"
+                  srcset="
+                    ./images/naruto/cry.400.jpeg 1x,
+                    ./images/naruto/cry.jpeg     2x
+                  "
+                >
+                <img
+                  class="card__img"
+                  src="./images/naruto/cry.jpeg"
+                  alt="На ступеньках сидят грустные Сакске, Сакура и Наруто. Наруто отчаянно кричит."
+                >
+              </picture>
+            </div>
+            <p class="card__text card__text_mb card__text_bt">
+              Во время учёбы часто возникает чувство, когда не знаешь, за что
+              хвататься. Вроде и проектную пора&nbsp;сдавать, и задачи хочется
+              порешать, и в теории получше разобраться, и жизнь не забыть
+              пожить. В такие моменты очень нужна концентрация. Вспомните,
+              откуда вы её черпали.
+            </p>
+            <p class="card__text">
+              Новый Год и длинные каникулы! Неторопливое, вдумчивое повторение
+              материала. Красота!
+            </p>
+            <div class="card__like">
+              <button class="card__icon-button" type="button">
+                <svg class="like-icon" width="39" height="36" fill="none">
+                  <g clip-path="url(#g)">
+                    <g class="heart">
+                      <path
+                        class="contour"
+                        fill="#000"
+                        d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"
+                      />
+                      <path
+                        class="main-body"
+                        fill="none"
+                        d="M12 9H9v3h3V9Zm3 3h-3v3h3v-3Zm3-3h-3v3h3V9Zm-6 6H9v3h3v-3Zm3 0h-3v3h3v-3Zm0 3h-3v3h3v-3Zm3-6h-3v3h3v-3Zm0 9h-3v3h3v-3Zm0-3h-3v3h3v-3Zm9-9h3v3h-3V9Zm-3 0h3v3h-3V9Zm3 3h3v3h-3v-3Zm-3 0h3v3h-3v-3Zm-3-3h3v3h-3V9Zm6 6h3v3h-3v-3Zm-3 0h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-3-6h3v3h-3v-3Zm0 9h3v3h-3v-3Zm0-3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0 3h-3v3h3v-3Z"
+                      />
+                      <path
+                        class="core"
+                        fill="none"
+                        d="M18 15h-3v3h3v-3Zm3 0h3v3h-3v-3Zm0 0h-3v3h3v-3Zm0-3h-3v3h3v-3Zm0 6h-3v3h3v-3Z"
+                      />
+                    </g>
+                    <path
+                      class="sparks"
+                      fill="none"
+                      d="M36 13h3v3h-3v-3Zm-9 14h3v3h-3v-3Zm-9 6h3v3h-3v-3Zm-9-6h3v3H9v-3ZM24 0h3v3h-3V0Zm9 3h3v3h-3V3ZM3 3h3v3H3V3Zm9-3h3v3h-3V0ZM0 13h3v3H0v-3Z"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="g">
+                      <path fill="#fff" d="M0 0h39v36H0z" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+              <button class="card__like-button button" type="button">
+                <span class="button__text">Like</span>
+              </button>
+            </div>
+          </section>
+        </li>
+        <li>
+          <section class="container card start">
+            <h2 class="card__title">«Сейчас я здесь»</h2>
+            <div class="card__picture-wrap img__now">
+              <span class="card__picture-label">&lt;experience&gt;</span>
+              <picture class="card__picture">
+                <source
+                  media="(width <= 640px)"
+                  srcset="
+                    ./images/naruto/now.400.jpeg 1x,
+                    ./images/naruto/now.jpeg     2x
+                  "
+                >
+                <img
+                  class="card__img"
+                  src="./images/naruto/now.jpeg"
+                  alt="Наруто с друзьями, улыбаясь, смотрят вперед."
+                >
+              </picture>
+            </div>
+            <p class="card__text card__text_mb card__text_bt">
+              Сейчас вы уже очень много знаете о вёрстке. Но это только начало.
+              Во&#8209;первых,&nbsp;впереди ещё много материала про «красотищу».
+              Во-вторых,&nbsp;с окончанием курса учёба не заканчивается. Вёрстка
+              — это целый мир. И этот мир постоянно меняется. Познать его
+              полностью не получится, но это тот случай, когда важен сам процесс
+              познания. Ведь часто путь — и есть результат.
+            </p>
+            <p class="card__text">
+              Я молодец! Я разобрала новый материал и повторила прошлый. У меня
+              еще есть задачи по этому курсу и я проработаю его целиком.
+            </p>
+            <div class="card__like">
+              <button class="card__icon-button" type="button">
+                <svg class="like-icon" width="39" height="36" fill="none">
+                  <g clip-path="url(#h)">
+                    <g class="heart">
+                      <path
+                        class="contour"
+                        fill="#000"
+                        d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"
+                      />
+                      <path
+                        class="main-body"
+                        fill="none"
+                        d="M12 9H9v3h3V9Zm3 3h-3v3h3v-3Zm3-3h-3v3h3V9Zm-6 6H9v3h3v-3Zm3 0h-3v3h3v-3Zm0 3h-3v3h3v-3Zm3-6h-3v3h3v-3Zm0 9h-3v3h3v-3Zm0-3h-3v3h3v-3Zm9-9h3v3h-3V9Zm-3 0h3v3h-3V9Zm3 3h3v3h-3v-3Zm-3 0h3v3h-3v-3Zm-3-3h3v3h-3V9Zm6 6h3v3h-3v-3Zm-3 0h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-3-6h3v3h-3v-3Zm0 9h3v3h-3v-3Zm0-3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0 3h-3v3h3v-3Z"
+                      />
+                      <path
+                        class="core"
+                        fill="none"
+                        d="M18 15h-3v3h3v-3Zm3 0h3v3h-3v-3Zm0 0h-3v3h3v-3Zm0-3h-3v3h3v-3Zm0 6h-3v3h3v-3Z"
+                      />
+                    </g>
+                    <path
+                      class="sparks"
+                      fill="none"
+                      d="M36 13h3v3h-3v-3Zm-9 14h3v3h-3v-3Zm-9 6h3v3h-3v-3Zm-9-6h3v3H9v-3ZM24 0h3v3h-3V0Zm9 3h3v3h-3V3ZM3 3h3v3H3V3Zm9-3h3v3h-3V0ZM0 13h3v3H0v-3Z"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="h">
+                      <path fill="#fff" d="M0 0h39v36H0z" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+              <button class="card__like-button button" type="button">
+                <span class="button__text">Like</span>
+              </button>
+            </div>
+          </section>
         </li>
       </ul>
-    </nav>
-  </header>
-  <main>
-    <section class="container card start">
-      <h2 class="card__title">
-        Фритрек и нулевой спринт: Подготовка&nbsp;к&nbsp;работе
-      </h2>
-      <picture class="card__picture">
-        <source media="(width <= 640px)" srcset="
-            ./images/car.375.png 1x,
-            ./images/car.750.png 2x
-            ">
-        <source media="(width > 640px)" srcset="
-              ./images/car.700.png 1x,
-              ./images/car.1400.png 2x
-            ">
-        <img class="card__img" src="./images/car.700.png"
-          alt="Изображение в пиксельной технике, как в первых компьютерных игрушках: красно-былый минивен едет по ночной дороге.">
-      </picture>
-      <p class="card__text card__text_mb card__text_bt">
-        Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно,
-        подумать, как новые знания могут повлиять на ваше будущее.
-      </p>
-      <p class="card__text">
-        Место для ваших воспоминаний о начале обучения.
-      </p>
-      <div class="card__like">
-        <button class="card__icon-button" type="button">
-          <svg class="like-icon" width="39" height="36" fill="none">
-            <g clip-path="url(#a)">
-              <g class="heart">
-                <path class="contour" fill="#000"
-                  d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z" />
-                <path class="main-body" fill="none"
-                  d="M12 9H9v3h3V9Zm3 3h-3v3h3v-3Zm3-3h-3v3h3V9Zm-6 6H9v3h3v-3Zm3 0h-3v3h3v-3Zm0 3h-3v3h3v-3Zm3-6h-3v3h3v-3Zm0 9h-3v3h3v-3Zm0-3h-3v3h3v-3Zm9-9h3v3h-3V9Zm-3 0h3v3h-3V9Zm3 3h3v3h-3v-3Zm-3 0h3v3h-3v-3Zm-3-3h3v3h-3V9Zm6 6h3v3h-3v-3Zm-3 0h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-3-6h3v3h-3v-3Zm0 9h3v3h-3v-3Zm0-3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0 3h-3v3h3v-3Z" />
-                <path class="core" fill="none"
-                  d="M18 15h-3v3h3v-3Zm3 0h3v3h-3v-3Zm0 0h-3v3h3v-3Zm0-3h-3v3h3v-3Zm0 6h-3v3h3v-3Z" />
-              </g>
-              <path class="sparks" fill="none"
-                d="M36 13h3v3h-3v-3Zm-9 14h3v3h-3v-3Zm-9 6h3v3h-3v-3Zm-9-6h3v3H9v-3ZM24 0h3v3h-3V0Zm9 3h3v3h-3V3ZM3 3h3v3H3V3Zm9-3h3v3h-3V0ZM0 13h3v3H0v-3Z" />
-            </g>
-            <defs>
-              <clipPath id="a">
-                <path fill="#fff" d="M0 0h39v36H0z" />
-              </clipPath>
-            </defs>
+      <button
+        class="save button"
+        type="button"
+        onclick="window['dialog-id'].showModal()"
+        aria-controls="dialog-id"
+      >
+        <svg
+          class="save__icon floppy"
+          width="29"
+          height="28"
+          viewBox="0 0 29 28"
+        >
+          <use href="./svg/floppy.svg#floppy"></use>
+        </svg>
+        <span class="save__title">Сохранить на память</span>
+      </button>
+      <dialog class="dialog" id="dialog-id">
+        <div class="dialog__header">
+          <svg class="floppy dialog__icon" viewBox="0 0 29 28">
+            <use href="./svg/floppy.svg#floppy"></use>
           </svg>
-        </button>
-        <button class="card__like-button button" type="button"><span class="button__text">Like</span></button>
-      </div>
-    </section>
-    <button class="save button" type="button">
-      <svg class="save__icon" width="29" height="28" viewBox="0 0 29 28">
-        <use href="./svg/floppy.svg#floppy"></use>
-      </svg>
-      <span class="save__title">Сохранить на память</span>
-    </button>
-  </main>
-  <script src="./scripts/set-theme.js"></script>
-  <script src="./scripts/like.js"></script>
-</body>
+          <h3 class="dialog__title">вставьте дискету, чтобы продолжить</h3>
+        </div>
 
+        <button
+          class="dialog__btn button"
+          type="button"
+          onclick="window['dialog-id'].close()"
+        >
+          <span class="save__title">ok</span>
+        </button>
+      </dialog>
+    </main>
+    <script src="./scripts/set-theme.js"></script>
+    <script src="./scripts/like.js"></script>
+  </body>
 </html>
