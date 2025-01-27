@@ -183,27 +183,27 @@
   filter: hue-rotate(140deg);
 }
 
-.img__scaring {
+.img-scaring {
   filter: brightness(125%) drop-shadow(0px 40px 101px lightblue);
 }
 
-.img__ideal {
+.img-ideal {
   filter: invert(100%) saturate(3);
 }
 
-.img__near {
+.img-near {
   filter: blur(2px);
 }
 
-.img__round-way {
+.img-round-way {
   filter: grayscale(1) invert(1);
 }
 
-.img__low-spitits {
+.img-low-spitits {
   filter: sepia(90%) saturate(200%) hue-rotate(315deg);
 }
 
-.img__now {
+.img-now {
   filter: saturate(200%);
 }
 
