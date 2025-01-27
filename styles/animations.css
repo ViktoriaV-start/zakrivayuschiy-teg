@@ -12,3 +12,54 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+.theme-menu__button[disabled]:before {
+  animation: arrow 1s ease-in-out infinite;
+}
+
+.like-icon.is-liked .heart {
+  animation: scaling 0.3s ease-in 0.1s 1;
+}
+
+.like-icon.is-liked .sparks {
+  animation: sparking 0.3s ease-in 0.3s 1;
+}
+
+@keyframes arrow {
+  0% {
+    left: -16px;
+  }
+  50% {
+    left: -12px;
+  }
+  100% {
+    left: -16px;
+  }
+}
+
+@keyframes scaling {
+  0% {
+    transform-origin: center;
+    scale: 1;
+  }
+  50% {
+    transform-origin: center;
+    scale: 1.2;
+  }
+  100% {
+    transform-origin: center;
+    scale: 1;
+  }
+}
+
+@keyframes sparking {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

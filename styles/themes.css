@@ -4,3 +4,33 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+
+.page.theme-light {
+  --bg-color: #fff;
+  --main-color: #000;
+  --bg-img: url(../svg/pattern-light.svg);
+  --border: 2px solid #000;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+}
+
+.page.theme-dark {
+  --bg-color: #000;
+  --main-color: #00cc14;
+  --bg-img: url(../svg/pattern-dark.svg);
+  --border: 2px solid #00cc14;
+  --font-weight-normal: 465;
+  --font-weight-bold: 785;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Дублируем переменные темы */
+    --bg-color: #000;
+    --main-color: #00cc14;
+    --bg-img: url(../svg/pattern-dark.svg);
+    --border: 2px solid #00cc14;
+    --font-weight-normal: 465;
+    --font-weight-bold: 785;
+  }
+}
